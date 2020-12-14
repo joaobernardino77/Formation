@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ Restaurant</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script async src="js/main.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- LOGO -->
+        <h2 id="page-header">
+            <img src="image/restaurant-logo.jpg" alt="logo picture">
+            XYZ Restaurant
+        </h2>
+        <!-- NAVIGATION -->
+        <nav id="main-navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#meal-select-container">Meal plan</a></li>
+                <em><span id="welcome"></span></em>
+                <button id="login-button" class="myButton">Login</button>
+                <button id="logout-button" class="myButtonOut">Logout</button>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero">
+        <div class="banner">
+            <h1>The Freshest Food</h1>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="page-main">
+        <!-- ABOUT -->
+        <div id="about" class="section-header about">
+            <h2>About</h2>
+            <p>
+                Don't be too proud of this technological terror you've constructed. The ability to destroy a planet is insignificant next to the power of the Force. I can't get involved! I've got work to do! It's not that I like the Empire, I hate it, but there's nothing I can do about it right now. It's such a long way from here.
+                
+                What!? I don't know what you're talking about. I am a member of the Imperial Senate on a diplomatic mission to Alderaan-- Look, I ain't in this for your revolution, and I'm not in it for you, Princess. I expect to be well paid. I'm in it for the money.
+                
+                She must have hidden the plans in the escape pod. Send a detachment down to retrieve them, and see to it personally, Commander. There'll be no one to stop us this time!
+            </p>
+        </div>
+        <!-- MENU -->
+        <section id="menu" class="site-section">
+            <div id="menu-inside" class="site-section-inside">
+                <div class="section-header">
+                    <h2>Menu</h2>
+                </div>
+            </div>
+        </section>
+        <br>
+
+        <!-- Weekly meal select form -->
+        <div id="meal-select-container">
+        <form class="selected-plates">
+            <h3>Weekly meal plan: </h3>
+            <span>Monday:</span>
+            <select id="monday">
+                <option value=0>No meal selected</option>
+                <option value=1>Fish</option>
+                <option value=2>Meat</option>
+            </select>
+            <span>Tuesday:</span>
+            <select id="tuesday">
+                <option value=0>No meal selected</option>
+                <option value=1>Fish</option>
+                <option value=2>Meat</option>
+            </select>
+            <span>Wednesday:</span>           
+            <select id="wednesday">
+                <option value=0>No meal selected</option>
+                <option value=1>Fish</option>
+                <option value=2>Meat</option>
+            </select> 
+            <span>Thursday:</span>           
+            <select id="thursday">
+                <option value=0>No meal selected</option>
+                <option value=1>Fish</option>
+                <option value=2>Meat</option>
+            </select>     
+            <span>Friday:</span>       
+            <select id="friday">
+                <option value=0>No meal selected</option>
+                <option value=1>Fish</option>
+                <option value=2>Meat</option>
+            </select>
+            <h5 id="total-price"></h5>
+            <button class="regular-button form-button" type="button">Register meal plan</button>
+        </form>
+        </div>
+    </div>
+
+    <!-- The Login/Register Modal -->
+    <div id="modal1" class="modal">
+        <!-- Modal Content -->
+        <form class="modal-content animate">
+            <div class="modal-container">
+                <span id="modal-close" class="close" title="Close Modal">&times;</span>
+
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter username" id="username" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="psw" required>
+        
+                <button id="modal-button" class="form-button" type="submit"></button>
+                <span class="register"><a id="aregister" href="#"></a></span>
+            </div>
+        </form>
+    </div>
+
+    <footer id="footer">
+        <img src="image/restaurant-logo.jpg" alt="logo picture">
+        <span>XYZ Restaurant<br>&copy; 2020</span>
+    </footer>
+</body>
+</html>

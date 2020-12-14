@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+
+        <h2 id="page-header">
+            <img src="images/log.png" alt="logo">
+            The restaurant
+        </h2>
+      
+        <nav id="main-navigation">
+            <ul>
+              <li><a href="index.html">Back</a></li>
+            </ul>
+        </nav>
+      </header>
+
+    <div id="login">
+        <form>
+            <input type="text" id="username" placeholder="username" required>
+            <input type="password" id="password" placeholder="password" required>
+            <input type="submit" value="login">
+        </form>
+        <p>or register <a href="register.html">here</a></p>
+    </div>
+
+    <script>
+        var form = document.querySelector('form');
+        var usernameInput = document.getElementById('username');
+        var passwordInput = document.getElementById('password');
+        
+        var user = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            if (user && usernameInput.value === user.username && passwordInput.value == user.password) {
+                alert("Logged in");
+                localStorage.setItem('isLoggedIn', true);
+                window.location.href = "index.html";
+            } else {
+                alert("Wrong credentials");
+            }
+        });
+    </script>
+</body>
+</html>

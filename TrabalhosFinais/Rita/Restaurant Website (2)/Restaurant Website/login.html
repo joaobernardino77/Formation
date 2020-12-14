@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--LINK PARA CSS-->
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body id="login-body">
+     <!--HEADER-->
+    <header>
+        <!-- <img class="background-image" src="./images/background.jpg" alt="background-image"> -->
+         <!--MENU-->
+        <nav class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a> </li>             
+                </ul>
+        </nav>
+    </header>
+     <!--FIM DO HEADER-->
+      <!--FORM-->
+    <div class="login-page">
+        <form action="./login.html" name="actionName">
+             <!--TITULO-->
+            <h1 id="form-title">Login</h1>
+             <!--USERNAME-->
+            <div class="username">
+                <label for="">Username:</label>
+                <input id="input_username" type="text" name="username" placeholder="Username" required>
+            </div>
+             <!--MAIL-->
+            <div class="email" style="display:none">
+                <label for="">Email:</label>
+                <input id="input_mail" type="text" name="mail" placeholder="Email">
+            </div>
+             <!--PASSWORD-->
+            <div>
+                <label for="">Password:</label>
+                <input id="input_password" type="password" name="password" placeholder="Password" required>
+            </div>
+             <!--BOTAO SUBMIT-->
+            <div class="submit">
+                <input id="submit" type="submit" value="Login" onclick="Submit()">
+            </div>
+             <!--MUDAR DE REGISTRO PARA LOGIN E VICE VERSA-->
+            <div>
+                <p  class="login-paragraph">If you already have an account please</p>
+                <a class="login-button" onclick = "functionLoginRegister()">Register</a>
+            </div>
+          
+        </form>
+        
+    </div>
+     <!--FIM DA FORM-->
+
+     <!--SCRIPT JS-->
+    <script src="./main.js">
+    </script>      
+</body>
+
+</html>

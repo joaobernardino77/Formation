@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="finalExercise.css" />
+
+    <title>Final Exercise</title>
+  </head>
+  <body>
+    <script src="finalExercise.js" defer></script>
+    <!-- HEADER -->
+    <header>
+      <!-- Logo -->
+      <h2 id="page-header" style="font-family: helvetica">
+        Beverlly's Corner
+      </h2>
+      <!-- NAVIGATION -->
+      <nav id="main-navigation">
+        <ul>
+          <li>
+            <a href="#menu">Menu</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a id="login">Login</a>
+          </li>
+          <li>
+            <a id="schedule" style="display: none;">Schedule</a>
+          </li>
+          <li>
+            <a id="logout" style="display: none;">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- The Login Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content" style="margin-top: 10%; width: 30%; height: 60%; text-align: center;">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>Login</h2>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input type="text" placeholder="Username" id="loginInput">
+                    <br>
+                    <input type="password" placeholder="Password" id="passwordInput">
+                    <br>
+                    <button id="loginBtn" type="submit" disabled>Login</button>
+                    <p id="pWarning">Please fill out all fields</p>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <p>If you are not registered click <a id="registerBtn">here</a></p>
+            </div>
+          </div>
+    </div>
+    <!-- The Register Modal -->
+    <div id="myModalRegister" class="modal">
+        <div class="modal-content" style="margin-top: 10%; width: 30%; height: 60%; text-align: center;">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>Register</h2>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input type="text" placeholder="Username" id="registerLoginInput">
+                    <br>
+                    <input type="password" placeholder="Password" id="registerPasswordInput">
+                    <br>
+                    <button id="confirmRegisterBtn" type="submit" disabled>Register</button>
+                    <p id="registerPWarning">Please fill out all fields</p>
+                </form>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+    </div>
+    <!-- Notification Modal -->
+    <div id="notification" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content" style="margin-top: 10%; width: 25%; height: 13%; text-align: center;">
+        <p id="notification-message" style="text-align: center; font-size: 25px;"></p>
+      </div>
+    </div>
+    <!-- Schedule Modal -->
+    <div id="scheduleModal" class="modal">
+      <div class="modal-content" style="margin-top: 10%; width: 30%; height: 60%; text-align: center; overflow: scroll;">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Schedule Your Meal</h2>
+          </div>
+          <div class="modal-body">
+            <p>Monday</p>
+            <select id="monday">
+              <option value="0">Select</option>
+            </select>
+            <p>Tuesday</p>
+              <select name="" id="tuesday">
+                <option value="0">Select</option>
+              </select>
+              <p>Wednesday</p>
+              <select name="" id="wednesday">
+                <option value="0">Select</option>
+              </select>
+              <p>Thursday</p>
+              <select name="" id="thursday">
+                <option value="0">Select</option>
+              </select>
+              <p>Friday</p>
+              <select name="" id="friday">
+                <option value="0">Select</option>
+              </select>
+              <br/>
+              <p id="totalPrice">Total: 0€</p>
+              <button id="scheduleBtn">Schedule</button>
+          </div>
+          <div class="modal-footer">
+            <p>all food is made with love <3</p>
+          </div>
+        </div>
+  </div>
+    <!-- Page Main -->
+    <div id="page-main">
+      <!-- HERO -->
+      <div class="hero">
+        <div class="hero-content">
+          <h1 class="hero-title"> Beverlly's Corner </h1>
+          <p> Venha construir uma memória deliciosa </p>
+        </div>
+      </div>
+      <!-- Menu -->
+      <div class="site-section" id="menu">
+        <h2 class="site-section-title about-title">Menu</h2>
+        <div class="menus-center" id="addMenu">
+        </div>
+      </div>
+      <!-- About -->
+      <div class="site-section section-about" id="about">
+        <h2 class="site-section-title about-title">About us</h2>
+        <p class="about-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper
+          sodales enim dictum lobortis. Fusce ac egestas turpis. Suspendisse
+          congue vehicula sem ultrices viverra. Vivamus enim tortor, maximus non
+          mattis eu, pretium rhoncus tellus. Class aptent taciti sociosqu ad
+          litora torquent per conubia nostra, per inceptos himenaeos. Nam
+          bibendum at erat id dapibus. Nullam sed nunc ac nisi condimentum
+          vulputate. Curabitur lobortis sem et semper viverra. Donec fermentum
+          efficitur orci non faucibus. Aliquam ac est pellentesque, posuere
+          augue eget, convallis turpis. Vivamus eleifend ligula et tempor
+          cursus. Etiam vehicula, eros eget tincidunt egestas, mi mi pretium
+          velit, quis consectetur quam leo vitae nisi. Etiam nunc justo, pretium
+          eget vestibulum sed, tempor nec erat. Sed fringilla vitae neque a
+          vestibulum. Aenean at sem eu dui tempor sodales id id quam. Curabitur
+          semper lacinia purus, ac luctus purus blandit at. Vestibulum ex est,
+          consequat in volutpat vitae, porttitor at neque. Vestibulum fermentum
+          lectus ligula, nec suscipit elit commodo vel.
+        </p>
+      </div>
+    </div>
+    <footer>
+      <span>Beverlly's Corner <br/>&copy;2020</span>
+    </footer>
+  </body>
+</html>

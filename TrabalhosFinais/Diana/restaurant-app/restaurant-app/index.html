@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Exercise</title>
+
+  <!-- load my css file -->
+  <link rel="stylesheet" href="./resources/css/restaurant.css">
+
+</head>
+
+<body>
+  <!-- navbar -->
+  <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#schedule">Schedule</a>
+    <a id="register" href="#">Register</a>
+    <a id="login" href="#">Login</a>
+    <a id="logout" href="#">Logout</a>
+  </div>
+
+
+  <div class="container">
+
+    <!-- about section -->
+    <div id="about">
+
+      <h1>About</h1>
+      <p class="about-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis fringilla ipsum eget pharetra. Etiam et
+        ante
+        tellus. Nulla massa arcu, feugiat quis rhoncus a, dapibus sed lorem. Nullam eget mollis nulla, eget ultrices
+        urna.
+        Maecenas varius vel magna sed egestas. Cras ut arcu non felis egestas dapibus interdum ut augue. Donec id erat
+        vestibulum, euismod elit in, finibus ante.
+
+        Etiam tincidunt commodo ex, eu ornare odio. Sed id interdum nulla, vel hendrerit odio. Phasellus nec lobortis
+        tellus. Donec tristique tellus vel urna finibus rhoncus. Phasellus et lorem id mi pretium varius. Donec ornare
+        velit nec sem tempus sodales. In porttitor volutpat mauris, a pulvinar lacus vehicula vehicula. Suspendisse a
+        maximus urna, quis eleifend leo.<br>
+
+        Aenean luctus fermentum ex, quis condimentum eros imperdiet vitae. Nulla egestas egestas eros non porttitor.
+        Phasellus luctus sapien sed hendrerit tincidunt. Duis sit amet nunc cursus, suscipit augue quis, fermentum ante.
+        In sollicitudin volutpat orci, sit amet feugiat nibh interdum et. Ut vel ante sagittis, auctor lorem blandit,
+        hendrerit turpis. Quisque eget egestas enim. Cras risus tellus, maximus a sagittis vel, ullamcorper at lacus.
+        Vivamus efficitur vehicula risus eget dapibus.
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Vivamus posuere
+        pellentesque felis at eleifend. Curabitur non arcu ante. Cras id risus id neque maximus hendrerit in nec sem.
+        Curabitur eu dui vitae sapien pharetra dictum. Nunc nec hendrerit libero. Integer sodales purus orci.<br> Nam
+        consectetur sit amet urna ut lacinia. Integer convallis nibh libero, quis pretium nunc accumsan eu.
+
+        Nam luctus porttitor tempus. Maecenas volutpat tortor quis velit tempor posuere pretium a felis. Vivamus quis
+        orci
+        eleifend, sollicitudin dolor ut, ornare leo. Suspendisse vel volutpat tortor. Donec in hendrerit justo, a
+        euismod
+        ante. Ut ornare nunc ac libero rutrum, quis suscipit ante pretium. Interdum et malesuada fames ac ante ipsum
+        primis in faucibus.
+      </p>
+
+    </div>
+
+
+    <div id="menu">
+      <h1>Menu</h1>
+
+      <p>Available menus</p>
+
+      <div id="menu-content" class="menu"></div>
+
+    </div>
+    
+    <div id='schedule'>
+      <h1>Schedule</h1>
+      <label for="dias">Please choose a day:</label>
+
+      <select name="day" id="day" multiple>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+      </select>
+      <br><br><br>
+
+      <label for="Plate">Please choose your plate:</label>
+
+      <select name="plate" id="plate">
+        <option value="Meat">Meat</option>
+        <option value="Fish">Fish</option>
+      </select>
+
+
+      <button id='btn-schedule' type="button">Schedule</button>
+
+      <div>
+        <p id="total"></p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class='footer'>
+    <h3>Reservations</h3>
+    <p>Contacts:</p>
+    <div class="footer-content">
+      <div class="footer-img">
+        <img src="./images/phone.png" alt="phone" style="width:20px;">
+        3065845669
+      </div>
+      <div class="footer-img">
+        <img src="./images/email.png" alt="email" style="width:30px;"> geral@my-restaurant.com
+      </div>
+    </div>
+
+  </footer>
+
+
+
+  <!-- load the my javascript file -->
+  <script type="text/javascript" src="./resources/js/restaurant.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,357 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+ }
+
+header {
+    background: #222222;
+    color: #ffffff;
+    padding: 5px 30px;
+    font-size: 16px;
+    position: sticky;
+    top:0;
+    left: 0;
+    width: 95vw;
+}
+
+header #page-header {
+    color: white;
+    text-decoration: none;
+    width: 49%;
+    display: inline-block;
+}
+
+header #main-navigation {
+    width: 49%;
+    display: inline-block;
+    text-align: right;
+}
+
+header #main-navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+header #main-navigation ul li {
+    display: inline-block;
+}
+
+header #main-navigation ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-left: 2vw;
+}
+
+header #main-navigation ul li a:hover {
+    background: #444;
+    border-radius: 3px;
+    transition: 0.3s ease all;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 100vh;
+    text-align: center;
+    background: #555555;
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+}
+
+.hero-content {
+    color: white;
+    padding-top: 33vh;
+    line-height: 1;
+}
+
+.hero-title {
+    margin: 0;
+    font-size: 100px;
+}
+
+.hero-content p {
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+
+.site-section {
+    padding-bottom: 80px;
+    padding-top: 80px;
+    
+}
+
+.site-section-title {
+    font-size: 2.3rem;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.menus-center {
+    width: var(--smallWidth);
+    margin: 0 auto;
+    max-width: var(--maxWidth);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    column-gap: 1.8rem;
+    row-gap: 1.8rem;
+    /* align-items: start; */
+}
+
+.menu {
+    background: #fff;
+    margin-bottom: 2rem;
+    box-shadow: 2px 5px 3px 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s linear;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    float: none;
+
+}
+
+.menu:hover {
+    box-shadow: 5px 12px 6px 2px rgba(0, 0, 0, 0.5);
+}
+
+.img-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    padding-top: 1vh;
+    background: rgba(255, 255, 255, 0.5);
+
+}
+
+.img-container img{
+    height: 25vh;
+    width: 25vh;
+}
+
+.menu img {
+    transition: all 0.3s linear;
+}
+
+
+.menu-footer {
+    padding: 0rem 1rem 1rem 1rem;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.menu-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-day {
+    font-size: x-small;
+}
+
+.menu-price {
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
+.section-about{
+    background-color:#222222;
+    color: #fff;
+    margin-left: 25px;
+    margin-right: 25px;
+    box-shadow: 4px 10px 6px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-title {
+    background-color: #222222;
+    margin-top: 0;    
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.about-text {
+    margin: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    text-align: justify;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0%;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: auto; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+/* Modal Header */
+.modal-header {
+    padding: 5px 16px;
+    color: #222222;
+    text-align: center;
+    margin-bottom: 8%;
+    margin-left: 3%;
+  }
+  
+  /* Modal Body */
+
+.modal-body input {
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #222222;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    width: 50%;
+}
+
+.modal-body button {
+    width: 50%;
+    margin-top: 8%;
+    color: #fff;
+    background-color: #222222;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.modal-body button:disabled {
+    background-color: #888888;
+}
+
+.modal-body form p{
+    color: red;
+    font-size: 14px;
+}
+  
+  /* Modal Footer */
+  .modal-footer {
+    padding: 2px 16px;
+
+  }
+
+.modal-footer p a{
+    text-decoration: underline;
+}
+
+.modal-footer p a:hover{
+    background: #222222;
+    color: white;
+    border-radius: 3px;
+    transition: 0.3s ease all;
+}
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }  
+
+  footer {
+    background: #222222;
+    color: #777777;
+    padding: 25px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+@media screen and (max-width: 1367px) {
+    .img-container img{
+        height: 20vh;
+        width: 15vh;
+    }
+}
+
+@media screen and (min-width: 1480) {
+    .img-container img{
+        height: 20vh;
+        width: 8vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* HEADER   */
+    header #page-header {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    header #main-navigation {
+        width: 100%;
+        display: block; 
+        text-align: center;
+    }
+    
+/*  HERO  */
+    .hero {
+        min-height: 300px;
+    }
+    .hero-content {
+        padding-top: 80px;
+    }
+    .hero-title {
+        font-size: 30px;
+    }
+    .hero-content p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .hero-content a {
+        font-size: 14px;
+        padding: 10px 15px;
+        border-width: 1px;
+        background: #FFF;
+        color: #333;
+        
+    }
+}

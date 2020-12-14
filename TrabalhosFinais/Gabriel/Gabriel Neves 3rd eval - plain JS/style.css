@@ -1,0 +1,57 @@
+nav {
+  display: flexbox;
+  justify-content: flex-end !important;
+}
+
+ul {
+  list-style: none;
+}
+
+footer {
+  height: 50px;
+  color: white;
+  text-align: center;
+}
+
+.carousel-item, img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+#welcome {
+  color:#eee;
+}
+
+.menu {
+  margin: 15px 15px;
+}
+
+.plate-list {
+  display: list-item;
+}
+
+.review {
+  /* display: flex; */
+}
+
+.plateItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plate-img {
+  margin: 10px;
+  object-fit: 200px;
+  border: 1px black solid;
+}
+
+#weekMeals{
+  display: contents;
+}
+
+.bar {
+  height: 20px;
+  width: 96%;
+}

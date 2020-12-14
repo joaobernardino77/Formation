@@ -1,0 +1,550 @@
+@font-face {
+  font-family: "old";
+  src: url("./font/Old\ Typography.ttf");
+}
+
+@font-face {
+  font-family: "Selima";
+  src: url("./font/Selima\ .otf");
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+header {
+  font-family: old;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* HEADER */
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  padding: 5px 5px;
+}
+
+.background-image {
+  width: 100%;
+  opacity: 0.9;
+}
+
+.centerLogged {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: none;
+  font-size: 40px;
+  display: none;
+}
+
+#UsernameLogged {
+  background-color: white;
+  opacity: 0.8;
+  width: 400px;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.centerLogged a {
+  background-color: white;
+  opacity: 0.8;
+  box-shadow: 0 8px 6px -6px black;
+  text-decoration: none;
+  border: 4px solid black;
+  color: black;
+  font-family: Selima;
+  font-size: 30px;
+  padding: 10px 40px;
+  transition: all 1s;
+}
+
+.centerLogged a:hover {
+  background-color: #e8b577;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 800px) {
+  #UsernameLogged {
+    width: 200px;
+    font-size: 20px;
+  }
+  .centerLogged a {
+    padding: 5px 10px;
+    font-size: 15px;
+  }
+}
+
+.login-index {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  border: 2px solid white;
+  padding: 10px 20px;
+}
+nav {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+nav ul {
+  line-height: 30px;
+}
+
+nav ul li {
+  position: relative;
+  float: right;
+  list-style: none;
+  padding: 0px 20px;
+  border-bottom: 2px solid white;
+}
+
+nav ul li a,
+.login-index {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  transition: all 0.8s;
+}
+
+.login-index:hover {
+  background-color: #e8b577;
+}
+nav ul li a:hover {
+  color: #e8b577;
+}
+
+@media only screen and (max-width: 800px) {
+  nav ul li a,
+  .login-index {
+    font-size: 10px;
+  }
+  .login-index {
+    width: 5%;
+  }
+}
+
+.restaurant-logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 10px;
+  text-align: center;
+  color: white;
+}
+
+.botao {
+  border: 2px solid white;
+  color: white;
+  padding: 15px 100px;
+  margin: auto;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.botao:hover {
+  background-color: #e8b577;
+  transition: 1s;
+}
+
+/*-------------------------------------- ABOUT --------------------------------------*/
+
+#about {
+  margin-top: -8px;
+  width: 100%;
+  height: 500px;
+  text-align: center;
+}
+
+.about-text {
+  float: left;
+  width: 50%;
+}
+.about-text h1 {
+  font-size: 40px;
+  font-family: old;
+}
+.about-text p {
+  margin: 20px;
+  text-align: justify;
+}
+.about-image {
+  float: left;
+  width: 50%;
+}
+
+.about-image img {
+  width: 100%;
+  height: 500px;
+  opacity: 0.9;
+}
+@media only screen and (max-width: 1400px) {
+  .about-text,
+  .about-image {
+    width: 100%;
+  }
+  #about p {
+    width: 80%;
+    margin: auto;
+  }
+
+  #about {
+    height: 700px;
+  }
+  .about-image img {
+    margin-top: 20px;
+    width: 50%;
+    height: auto;
+  }
+}
+
+#menu img {
+  margin-top: -5px;
+}
+
+#menu,
+#schedule {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  padding: 5px 5px;
+  /* background-image: url("/images/menu-fundo.jpg"); */
+  background-color: whitesmoke;
+}
+
+#schedule {
+  height: 500px;
+}
+#menu h1,
+#schedule h1 {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translate(-50%, -50%);
+  color: black;
+  text-transform: uppercase;
+  font-size: 50px;
+  font-family: old;
+}
+
+.carta {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 5px;
+  width: 100%;
+  height: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Selima;
+}
+
+.carta h2 {
+  font-size: 40px;
+}
+
+.carta h3 {
+  font-size: 15px;
+  color: grey;
+}
+
+.carta h4 {
+  font-size: 14px;
+  color: #e8b577;
+}
+
+.carta p {
+  font-family: Selima;
+  font-size: 20px;
+  color: black;
+}
+
+.elemento {
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  margin-top: 120px;
+  margin-left: 10px;
+  vertical-align: middle;
+  background-color: white;
+  border-radius: 5%;
+  box-shadow: 0 8px 6px -6px black;
+  transition: all 1s;
+}
+
+.elemento img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  opacity: 0.5;
+  box-shadow: 0 8px 6px -6px black;
+  transition: all 1s;
+}
+
+.elemento:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 1s;
+}
+
+.elemento img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  opacity: 1;
+  transition: all 1s;
+}
+
+footer {
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 5px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  font-family: old;
+}
+
+footer p {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+}
+
+footer h1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 50px;
+}
+
+footer #contact {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  display: inline-block;
+  text-align: center;
+}
+
+#contact .inf {
+  float: left;
+  box-sizing: border-box;
+  width: 33%;
+  padding: 10px;
+}
+
+.inf h3 {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+}
+@media only screen and (max-width: 800px) {
+  #contact .inf {
+    font-size: 10px;
+    margin-top: 80px;
+  }
+  .inf h3 {
+    font-size: 8px;
+  }
+}
+.login-page {
+  width: 100%;
+  height: fit-content;
+}
+#login-body {
+  background-color: #e8b577;
+}
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 50%;
+  background-color: whitesmoke;
+  padding: 20px;
+  box-shadow: 0 8px 6px -6px black;
+  text-transform: uppercase;
+}
+
+form h1 {
+  font-family: old;
+  font-size: 30px;
+}
+
+form input {
+  margin-top: 30px;
+  width: 50%;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+form label {
+  margin-top: 40px;
+  font-size: 10px;
+}
+
+#username,
+#email,
+#password {
+  border: 2px solid black;
+  background: transparent;
+  color: black;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 10px;
+  transition: 1s;
+}
+#submit {
+  border: 2px solid black;
+  background: black;
+  color: white;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 10px;
+  transition: 1s;
+  width: fit-content;
+}
+
+#submit:hover {
+  background-color: #e8b577;
+  color: black;
+  border: black;
+  cursor: pointer;
+  transition: 1s;
+}
+
+form a {
+  text-decoration: underline;
+  color: #e8b577;
+  font-size: 10px;
+}
+
+form p {
+  font-size: 10px;
+}
+
+.schedule-plate {
+  text-align: center;
+  margin-top: 100px;
+}
+
+#schedule {
+  background: white;
+  margin-top: 80px;
+  height: fit-content;
+  text-align: center;
+}
+
+.diaDaSemana {
+  display: inline-block;
+  margin: auto;
+  margin-left: 40px;
+  font-family: Selima;
+  font-size: 30px;
+  margin-top: 30px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.tituloSemana {
+  margin: auto;
+  vertical-align: middle;
+  color: #e8b577;
+  font-size: 30px;
+}
+
+.prato-book {
+  font-size: 10px;
+  margin-top: 20px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  width: 200px;
+  margin: 5px 0;
+}
+
+.prato-book h3 {
+  font-size: 15px;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  position: relative;
+  float: right;
+  padding: 0;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: -30px;
+  border: 1px solid grey;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+input[type="checkbox"]:hover {
+  border-color: #e8b577;
+}
+
+input[type="checkbox"]:checked {
+  animation: roda 0.4s ease;
+  background: #e8b577;
+  border: #e8b577;
+}
+@keyframes roda {
+  50% {
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes roda2 {
+  50% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+input[type="checkbox"]:not(:checked) {
+  animation: roda2 0.4s ease;
+  background: white;
+}
+
+/*TOTAL*/
+.total {
+  margin-top: 50px;
+  font-family: old;
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid black;
+  width: 25%;
+}
