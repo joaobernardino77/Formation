@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação</title>
+    <link rel="stylesheet" href="bistroHomeStyle.css">
+</head>
+<body>
+    
+        <!--HEADER*/-->
+    <header id="page-header">
+    
+        <!--LOGO-->
+    <h2 id="page-header">
+        <img src="Image/logo.jpg">
+        JS Bistro
+    </h2>
+    
+        <!--NAVIGATION-->
+    <nav id="main-navigation">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li id="login"><a href="#bg" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></li>
+            <li ><a href="#bg2" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Register</a></li>
+            <li id="logout"><a href="#" onclick="logOutFunc()">Logout</a></li>
+            <li id="booking"><a href="#bg3" onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Booking</a></li>
+            </ul>        
+   
+    </nav>
+</header>
+      <!--LOGIN-->
+
+    <div id="loginbox"></div> 
+    <div class="box">
+        <div id="id01" class="modal">
+  
+            <div class="modal-content animate">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+          
+              <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input id="login-name" type="text" placeholder="Enter Username" name="uname" required>
+          
+                <label for="psw"><b>Password</b></label>
+                <input id="login-psw" type="password" placeholder="Enter Password" name="psw" required>
+                  
+                <button onclick="loginDiv()">Login</button>
+              </div>
+          
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </div>
+          </div>
+    </div>     
+    
+<!--REGISTER-->
+<div id="register">
+<div class="box">
+    <div id="id02" class="modal">
+
+        <form class="modal-content animate">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+      
+          <div class="container">
+            <label for="uname"><b>Register Username</b></label>
+            <input id="register-name" type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Register Password</b></label>
+            <input id="register-psw" type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button onclick="registerDiv()" >Submit</button>
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+</div>     
+</div>
+
+
+        <!-- MAIN-->
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                JS Bistro
+            </h1>
+            <p>
+                Wellcome to tast paradise!
+            </p>
+        </div>
+    </div>
+
+        <!-- ABOUT-->
+
+        <div id="about" class="section-header about">
+            <h2>About Us</h2>
+            <p>
+                JS Bistro is a cozy place that combines high quality food,<br>
+                homemade flavor and personalized service. That's how <br>
+                JS Bistro, opened in 2009 in Bairro Alto, has won and has
+                won everyone's taste.
+            </p>  
+        </div>   
+
+    
+        <!--MENU-->
+    <div id="menu" class="menu-box-style">
+        <div class="section-header">
+            <h2>Our Plates</h2>
+        </div>
+        <div id="menuDay" class="menu-style"></div>
+    </div>       
+   
+    <!--BOOKING FORM-->
+
+    <div id="bookingForm"></div> 
+    <div class="box3">
+        <div id="id03" class="modal">
+  
+            <div class="modal-content animate">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+          
+                <div class="container">
+                    <label for="bookingName"><b>Reservation Name</b></label>
+                    <input id="bookingName" type="text" placeholder="Reservation Name" name="bookingName" required>
+          
+                    <label for="bookingDay"><b>Reservation Day</b></label>
+                    <input id="bookingDay" type="text" placeholder="Day of the week" name="bookingDay" required>
+                    
+                    <label for="howManyPeople"><b>How many people?</b></label>
+                    <input id="howManyPeople" type="text" placeholder="howManyPeople?" name="howManyPeople" required>
+
+
+                    <select id="menuChoice" class="bookingMenu">
+                        <option disabled="disabled" selected="selected">Please, tell us your choice</option>
+                        <option>Meat</option>
+                        <option>Fish</option>
+                    </select>
+
+                    <button onclick="booking()">Send it</button>
+                </div>
+          
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+            </div>
+          </div>
+    </div>     
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+var currPlateDay="";
+var menuDiv = document.getElementById("menuDay");
+var currDiv
+var plates=[
+ {
+ Name:"Salmon",
+ Day:"Monday",
+ Type:"Fish",
+ Price:1,
+ img:"https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg"
+ },
+ {
+ Name:"Lasagna",
+ Day:"Monday",
+ Type:"Meat",
+ Price:1,
+ img:"https://cdn.pixabay.com/photo/2016/12/11/22/41/lasagna-1900529_960_720.jpg"
+ },
+ {
+ Name:"Sardines",
+ Day:"Tuesday",
+ Type:"Fish",
+ Price:2,
+ img:"https://cdn.pixabay.com/photo/2016/06/30/18/49/sardines-1489626_960_720.jpg"
+ },
+ {
+ Name:"Chicken",
+ Day:"Tuesday",
+ Type:"Meat",
+ Price:3,
+ img:"https://cdn.pixabay.com/photo/2016/11/18/17/42/barbecue-1836053_960_720.jpg"
+ },
+ {
+ Name:"Fish And Chips",
+ Day:"Wednesday",
+ Type:"Fish",
+ Price:4,
+ img:"https://naminhapanela.com/wp-content/uploads/2016/04/fish-and-chips.jpg"
+ },
+ {
+ Name:"Hamburguer",
+ Day:"Wednesday",
+ Type:"Meat",
+ Price:4,
+ img:"https://cdn.pixabay.com/photo/2016/03/05/19/37/appetite-1238459_960_720.jpg"
+ },
+ {
+ Name:"Sushi",
+ Day:"Thursday",
+Type:"Fish",
+ Price:5,
+ img:"https://cdn.pixabay.com/photo/2016/11/25/16/08/sushi-1858696_960_720.jpg"
+ },
+ {
+ Name:"Spaghetti bolognese",
+ Day:"Thursday",
+ Type:"Meat",
+ Price:7,
+ img: "https://supervalu.ie/thumbnail/720x400/var/files/real-food/recipes/Uploaded-2020/spaghetti-bolognese-recipe.jpg?fill=1"
+ },
+ {
+ Name:"Chicken",
+ Day:"Friday",
+Type:"Fish",
+ Price:7,
+ img:"https://cdn.pixabay.com/photo/2016/11/18/17/42/barbecue-1836053_960_720.jpg"
+ },
+ {
+ Name:"Fish Soup",
+ Day:"Friday",
+ Type:"Meat",
+ Price:7,
+ img:"https://cdn.pixabay.com/photo/2018/01/01/17/57/fish-soup-3054627_960_720.jpg"
+ }
+]
+
+// PROGRAMAÇÃO DO MENU
+for(i=0;i<plates.length;i++){
+
+//cria div pro dia da semana
+currDiv=document.createElement("div")
+currDiv.setAttribute("class","plateGeneralDiv")
+menuDiv.appendChild(currDiv);
+
+var plateDay=document.createElement("day")
+plateDay.textContent= plates[i].Day + " : " +  plates[i].Name;
+currDiv.appendChild(plateDay);
+currPllateDay=plates[i].Day
+
+
+
+var plateDiv=document.createElement('div');
+currDiv.appendChild(plateDiv)
+
+var imgPlate=document.createElement("img");
+imgPlate.src=plates[i].img;
+plateDiv.appendChild(imgPlate);
+}
+
+
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+// Get the modal 2
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+   // Get the modal 3
+var modal = document.getElementById('id03');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+   
+
+function registerDiv(){
+    var registerNameDiv = document.getElementById('register-name').value;
+    var registerPswDiv = document.getElementById('register-psw').value;
+    
+    var dadosRegister = localStorage.getItem('registerUser') ? JSON.parse(localStorage.getItem('registerUser')):[];
+
+    var user =  {
+        name: registerNameDiv.toLowerCase(),
+        pass: registerPswDiv.toLowerCase()
+    }
+    dadosRegister.push(user);
+    localStorage.setItem('registerUser',JSON.stringify(dadosRegister));
+console.log(registerDiv);
+}
+ 
+function loginDiv(){
+    var loginNameDiv = document.getElementById('login-name').value;
+    var loginPswDiv = document.getElementById('login-psw').value;
+    
+    var dadosRegister = localStorage.getItem('registerUser') ? JSON.parse(localStorage.getItem('registerUser')):[];
+
+    var logedUser = dadosRegister.filter(function(user){
+        return user.name == loginNameDiv.toLowerCase() && user.pass == loginPswDiv.toLowerCase();
+ 
+    })
+    
+    if (logedUser.length == 0){
+        alert ('User not found')
+    } else {
+        localStorage.setItem('logedUser',JSON.stringify(logedUser[0])); 
+        userLogedPage();         
+    }
+    document.getElementById('id01').style.display='none'; //pra fechar após clicar no login
+
+    }
+    
+    function userLogedPage (){
+        if(localStorage.getItem('logedUser')){
+            document.getElementById('login').style.display="none";
+            document.getElementById('logout').style.display="block";
+            document.getElementById('booking').style.display="block"
+            //colocar as divs do logout e do booking form usando o .style.display='block';
+             // colocar o que eu quero esconder com .style.display='none';
+        } else{
+            document.getElementById('login').style.display="block";
+            document.getElementById('logout').style.display="none";
+            document.getElementById('booking').style.display="none"
+            // colocar o contrário do if acima.
+ 
+        }
+    }
+    
+    function logOutFunc (logedUser){
+        
+        localStorage.removeItem('logedUser');
+        userLogedPage();
+        alert('ok');
+    }
+
+
+    function booking(){
+        var bookingName= document.getElementById('bookingName').value;
+        var bookingDay=document.getElementById('bookingDay').value;
+        var howManyPeople=document.getElementById('howManyPeople').value;
+        var userChoice=document.getElementById('menuChoice').value;
+    
+        var userBooking = localStorage.getItem('registerBooking') ? JSON.parse(localStorage.getItem('registerBooking')):[];
+        var finishBooking = {
+            Name:bookingName,
+            Day:bookingDay,
+            HowMany:howManyPeople,
+            Menu:userChoice
+        }
+    
+        userBooking.push(finishBooking);
+        localStorage.setItem('registerBooking', JSON.stringify(userBooking));
+        console.log(booking);
+        document.getElementById('id03').style.display='none';
+    }
+    
+
+   
+
+   userLogedPage();
+    
+    
+   
+
+  </script>
+
+</body>
+</html>
