@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>White & Yellow Restaurant Website</title>
+    <script src="https://kit.fontawesome.com/b66dc199af.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <!--     NAME:LOGO -->
+      <h2 id="name-logo">White & Yellow</h2>
+
+      <!--     NAV BAR     -->
+      <nav id="main-navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a class="login-user" href="#login">Login</a></li>
+          <li><a class="register-user" href="#register">Sign Up</a></li>
+          <li><a class="schedule" href="#schedule">Schedule</a></li>
+          <li><a class="logout-user" href="#logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+      <!--     MODALS     -->
+    <div id="login-container" class="modal-container">
+      <div class="modal">
+        <button class="close-button">x</button>
+        <h2 class="modal-title">Login</h2>
+        <div class="login">
+          <form name="form-login">
+            <label for="userEmail">Email</label>
+            <input type="email" id="userEmail" placeholder="Email" required />
+
+            <label for="userPassword">Password</label>
+            <input type="password" id="userPassword" placeholder="Password" required />
+
+            <div id="remember">
+              <input type="checkbox" value="lsRememberMe" id="rememberMe"/>
+              <label>Remember me</label>
+            </div>
+            <input id="login_btn" type="submit" value="Login" onclick="checkLogin()"/>
+            <p>Need To Register? <a class="register-thru-login" href="#register">Click Here</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="register-container" class="modal-container">
+      <div class="modal">
+        <button class="close-button">x</button>
+        <h2 class="modal-title">Register</h2>
+        <div class="login">
+          <form name="form-login">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Email" required />
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" required />
+
+            <ul class="helper-text">
+              <li class="length">Must be at least 8 characters long.</li>
+              <li class="lowercase">Must contain a lowercase letter.</li>
+              <li class="uppercase">Must contain an uppercase letter.</li>
+              <li class="special"> Must contain a number or special character.</li>
+            </ul>
+            <input id="rgstr_btn" type="submit" value="Register" onclick="store()" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="logout-container" class="modal-container">
+      <div class="modal">
+        <button class="close-button">x</button>
+        <h2 class="modal-title">Logging out</h2>
+        <div class="logout">
+          <p>Are your sure you want to logout?</p>
+            <button id="yes-button" onclick="logout()">Yes</button>
+            <button id="no-button" onclick="continueLogin()">No</button>
+        </div>
+      </div>
+    </div>
+
+      <!--     MAIN section   -->
+    <div id="page-main">
+
+      <!--     HERO section     -->
+      <div class="hero">
+        <div class="hero-content">
+          <p class="hero-subtitle">123 FAKE STREET - LIS, PT - 1115-000</p>
+          <h1 class="hero-title">EAT | DRINK | VISIT</h1>
+        </div>
+      </div>
+
+      <!--     ABOUT     -->
+      <div id="about" class="about-content">
+        <h2>About</h2>
+        <p>
+          Aroma blue mountain as coffee single origin doppio, decaffeinated
+          beans caffeine et body trifecta. Sugar, roast, cappuccino mazagran,
+          siphon, latte, sugar barista sweet barista caramelization.
+          <br />
+          That, extra aftertaste, coffee blue mountain trifecta caffeine
+          aromatic frappuccino arabica cappuccino skinny. Aftertaste in filter,
+          robusta id variety chicory café au lait. Viennese cinnamon
+          decaffeinated single shot skinny single origin half and half. Seasonal
+          mug redeye americano cortado a strong froth breve.
+          <br />
+          Lungo breve cream, wings, redeye, arabica, barista doppio aftertaste
+          in aromatic strong. Roast coffee siphon id brewed froth viennese.
+          Roast frappuccino roast viennese latte spoon et variety carajillo
+          cream. Cup filter, lungo barista single shot steamed, rich galão
+          caffeine robust cultivar. Medium latte java con panna strong, crema
+          white dripper body frappuccino grinder single origin. Viennese that,
+          ut as that spoon variety.
+        </p>
+      </div>
+
+      <!--     MENU     -->
+      <div id="menu" class="menu-section">
+        <div class="menu-section-inside">
+          <div class="menu-header">
+            <h2>Menu</h2>
+          </div>
+
+          <div class="meals">
+          </div>
+        </div>
+      </div>
+
+      <!--     SCHEDULE     -->
+      <div id="schedule" class="schedule-section">
+        <h2>Schedule your plates for the week</h2>
+        <div class="schedule-content">
+          <h4>Please choose below the plate(s) you want to order:</h4>
+          <div class="choose-items">
+          </div>
+        </div>
+        <div class="choose-action">
+            <button id="finish-order-btn" onclick="finishOrder(); saveStorage();">Finish the order</button>
+        </div>
+        <div class="final-order">
+        </div>
+      </div>
+
+    </div>
+    <!--     FOOTER     -->
+    <footer id="footer">
+      <span>Develop by Branca Chiotte &copy; 2020 </span>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
